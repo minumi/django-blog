@@ -2,15 +2,17 @@
 
 {% block content %}
 {% if posts.count > 0 %}
-<ul id="post-list">
+<section id="post-list">
   {% for post in posts %}
-  <li>
+  <div>
     <h2>{{ post.title }}</h2>
     <div>{{ post.content }}</div>
-  </li>
+  </div>
   {% endfor %}
-</ul>
+</section>
 {% else %}
-<p id="no-data">표시할 내용이 없습니다.</p>
+<section id="no-data">
+  <p>표시할 내용이 없습니다.</p>
+</section>
 {% endif %}
 {% endblock %}
