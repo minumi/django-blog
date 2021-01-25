@@ -6,64 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}나만의 블로그{% endblock %}</title>
   <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-  <style>
-    @font-face {
-      font-family: 'IBMPlexSansKR-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    body {
-      font-family: 'IBMPlexSansKR-Regular';
-      color: #212529;
-      line-height: 1.2;
-    }
-
-    header {
-      height: 50px;
-      padding: 5px 10px;
-    }
-
-    header .header-group {
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
-
-    header .header-group__left {
-      float: left;
-    }
-
-    header .header-group__right {
-      float: right;
-    }
-
-    header .header-group .logo {
-      color: #212529;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 26px;
-    }
-
-    header .header-group .button {
-      border: 0;
-      margin: 0;
-      padding: 0;
-      background: none;
-      cursor: pointer;
-      margin-left: 5px;
-      border-radius: 20px;
-      height: 30px;
-      width: 70px;
-      line-height: 1.2;
-    }
-
-    header .header-group .button.dark {
-      background: #212529;
-      color: white;
-    }
-  </style>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}">
 </head>
 
 <body>
