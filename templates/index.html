@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>나만의 블로그</title>
-</head>
-
-<body>
-  {% if posts.count > 0 %}
-  <ul id="post-list">
-    {% for post in posts %}
-    <li>
-      <h2>{{ post.title }}</h2>
-      <div>{{ post.content }}</div>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p id="no-data">표시할 내용이 없습니다.</p>
-  {% endif %}
-</body>
-
-</html>
+{% block content %}
+{% if posts.count > 0 %}
+<ul id="post-list">
+  {% for post in posts %}
+  <li>
+    <h2>{{ post.title }}</h2>
+    <div>{{ post.content }}</div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p id="no-data">표시할 내용이 없습니다.</p>
+{% endif %}
+{% endblock %}
