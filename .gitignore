@@ -158,3 +158,6 @@ dmypy.json
 # Selenium
 chromedriver
 geckodriver
+
+# vscode
+.vscode
