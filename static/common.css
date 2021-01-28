@@ -57,6 +57,10 @@ header .header-group .button.dark:hover {
   background: #495057;
 }
 
+section {
+  padding: 0 10px;
+}
+
 .button {
   border: 0;
   margin: 0;
